@@ -1,0 +1,62 @@
+<div id=".">
+<h3>CONTROL DE BOLETO</h3>
+<form action="#" method="post" name="formu" enctype="multipart/form-data">
+<div id="datos">
+<label for="opciones">Elige tu destino:</label><br/>
+<select id="opciones" name="opciones">
+<option value="precio" id="precioDestino" selected="lugar">Selecciona</option>
+<option value='1500'; >Acapulco</option>
+<option value='2500';>Puerto Vallarta</option>
+<option value='3500';>Cancún</option>
+</select>
+<label id="numero" for="cantidad">Número de boletos:</label>
+<input type="number" id="cantidad" name="numero"  size="2" maxlength="2"  /><br/>
+</div>
+<p aling="center"><font face="algerian" size=3 color="BLACK"> PRECIO DE LOS BOLETOS</font> </p>
+<p aling="center"><font face="arial" size=3 color="red"></font></p>
+<ul>
+<li>1.Acapulco
+<ul>
+<li>1500</li>
+</ul>
+</li>
+<li>2.Puerto Vallarta
+<ul>
+<li>2500</li>
+</ul>
+</li>
+<li>3.Cancún
+<ul>
+<li>3500</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>
+<button type="button" id="total"> DA CLICK AQUÍ PARA OBTENER EL TOTAL A PAGAR</button>
+<p aling="center"><font face="algerian" size=4 color="Black"> EL TOTAL A PAGAR ES:</b> </font> </p>
+<p id="resultado">
+
+<script>
+
+const total = document.querySelector('#total');
+
+
+total.addEventListener('click',ev=> {
+let precio=document.querySelector("#opciones").value;
+console.log(precio);
+let cantidad=document.querySelector("#cantidad").value;
+console.log(cantidad);
+let operacion= Number(precio)* Number (cantidad);
+
+document.querySelector("#resultado").innerHTML =Number(operacion);
+
+});
+
+
+
+</script>
+</body>
+</html>
+</body>
+</html>
